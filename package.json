@@ -1,0 +1,26 @@
+{
+  "name": "ujarma-admin",
+  "version": "1.0.0",
+  "description": "ujarma.GE admin project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Ujarma-admin"
+  },
+  "author": "NikushaWD",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.11.0",
+    "sweetalert2": "^11.12.4"
+  }
+}
