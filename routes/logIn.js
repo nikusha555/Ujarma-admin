@@ -32,18 +32,18 @@ router.post('/', async (req, res) => {
         }
 
         // Generate JWT token
-        const token = jwt.sign({ id: user.id, email: user.email }, JWT_SECRET, { expiresIn: '1m' });
+        const token = jwt.sign({ id: user.id, email: user.email }, JWT_SECRET, { expiresIn: '100000m' });
 
         // Wait for 1 minute and then try to verify the token again
-        setTimeout(() => {
-            jwt.verify(token, JWT_SECRET, (err, decoded) => {
-                if (err) {
-                    console.error('Token verification failed after expiration:', err.message);
-                } else {
-                    console.log('Decoded Token after expiration:', decoded);
-                }
-            });
-        }, 60000); // Wait for 60 seconds (1 minute)
+        // setTimeout(() => {
+            // jwt.verify(token, JWT_SECRET, (err, decoded) => {
+                // if (err) {
+                    // console.error('Token verification failed after expiration:', err.message);
+                // } else {
+                    // console.log('Decoded Token after expiration:', decoded);
+                // }
+            // });
+        // },600000000000000000000000000000000000000000 ); // Wait for 60 seconds (1 minute)
 
         // Set token in cookie
         res.cookie('token', token, { httpOnly: true });

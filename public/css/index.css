@@ -1,0 +1,32 @@
+body {
+    background: url(../images/ujarma-cover.jpeg);
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+.container {
+    z-index: -1;
+    display: flex;
+    width: 820px;
+    height: 669px;
+    margin-top: 10px;
+    margin-right: -8px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 20px 30px black;
+    float: right;
+    animation: containerSlide 3s both;
+}
+
+
+@keyframes containerSlide {
+    from {
+        margin-right: -800px;
+    }
+
+    to {
+        margin-right: -8px;
+    }
+
+}

@@ -4,7 +4,7 @@ const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '1234',
-    database: 'ujarma_app',
+    database: 'ujarma-app',
 });
 
 db.connect((err) => {

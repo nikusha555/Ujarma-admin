@@ -10,6 +10,7 @@
 
 <body>
 
+
     <div class="container" id="container">
         <form id="loginForm">
             <input type="email" id="email" name="email" placeholder="Email" required>
@@ -24,6 +25,7 @@
         const form = document.getElementById('loginForm');
         const result = document.getElementById('result');
         const container = document.getElementById('container');
+
 
         form.addEventListener('submit', async (event) => {
             event.preventDefault();
@@ -45,15 +47,18 @@
 
 
                     // Increase the container size
-                    container.style.width = '100vw';
-                    container.style.height = '100vh';
-                    container.style.borderRadius = '0'; // Remove border-radius to make it rectangular
-                    container.style.transition = 'width 1s ease, height 1s ease, border-radius 1s ease'; // Smooth transition effect
+                    container.style.width = '500vw';
+                    container.style.height = '500vh';
+                    container.style.boxShadow = '0px 0px 20px 35px #005226  inset';
+                    // container.style.borderRadius = '0'; // Remove border-radius to make it rectangular
+                    container.style.transition = 'width 2s ease, height 2s ease, border-radius 1s ease'; // Smooth transition effect
+                    form.style.opacity = '0.5'
+
 
                     // Redirect to the specified URL after a delay
                     setTimeout(() => {
                         window.location.href = data.redirectUrl;
-                    }, 1000); // 1-second delay to allow the container to resize before redirecting
+                    }, 500); // 1-second delay to allow the container to resize before redirecting
 
                 } else {
                     const errorData = await response.json();
